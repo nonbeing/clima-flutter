@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const Color kTransparentColor = Color(0x00000000);
+
 const kTempTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
   fontSize: 100.0,
@@ -13,11 +15,14 @@ const kMessageTextStyle = TextStyle(
 const kButtonTextStyle = TextStyle(
   fontSize: 30.0,
   fontFamily: 'Spartan MB',
+  color: Colors.white,
 );
 
 const kConditionTextStyle = TextStyle(
   fontSize: 100.0,
 );
+
+const kLightGrey = Color(0xFFD6D6D6);
 
 const kTextFieldInputDecoration = InputDecoration(
   filled: true,
@@ -28,7 +33,7 @@ const kTextFieldInputDecoration = InputDecoration(
   ),
   hintText: 'Enter city name ...',
   hintStyle: TextStyle(
-    color: Colors.grey,
+    color: kLightGrey,
   ),
   border: OutlineInputBorder(
     borderRadius: BorderRadius.all(
