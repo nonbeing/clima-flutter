@@ -84,7 +84,12 @@ class _LocationScreenState extends State<LocationScreen> {
                           },
                         ),
                       );
-                      print(cityName);
+                      print('[DEBUG] Got cityName from CityScreen: $cityName');
+                      if (cityName != null) {
+                        var weatherData =
+                            await weather.getCityWeather(cityName);
+                        updateUI(weatherData);
+                      }
                     },
                     child: Icon(
                       Icons.location_city,
@@ -98,7 +103,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      weatherIcon == 'Error' ? '' : '$temperature°',
+                      weatherIcon == 'Error' ? '' : '$temperature°C ',
                       style: kTempTextStyle,
                     ),
                     Text(
